@@ -4,3 +4,15 @@
 	list-style: none;
 	text-decoration: none;
 }
+a.btn{
+	background-color: white;
+	border-color: darkcyan;
+	color: darkcyan;
+}
+a.btn:hover{
+	background-color: #777777;
+}
+a.btn:active{
+	background-color: yellow;
+	color: blue;
+}
