@@ -1,0 +1,43 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+/*
+a[role=button]{
+	background-color: white;
+	border: 1px solid darkcyan;
+	color: darkcyan;
+	border-radius: 10px;
+	padding: 10px;
+	text-decoration: none;
+	transition-duration: 0.4s;
+	border-radius: 8px;
+}
+a[role=button]:hover{
+	background-color: #aaaaaa;
+}
+a[role=button]:active{
+	background-color: #777777;
+}*/
+a{
+    text-decoration: none;
+    color: #000;
+}
+button.buy{
+	background-color: white;
+	border: 1px solid darkcyan;
+	color: darkcyan;
+	border-radius: 10px;
+	padding: 10px;
+	text-decoration: none;
+	transition-duration: 0.4s;
+	border-radius: 8px;
+}
+button.buy:hover{
+	background-color: #aaaaaa;
+}
+button.buy:active{
+	background-color: #777777;
+}
