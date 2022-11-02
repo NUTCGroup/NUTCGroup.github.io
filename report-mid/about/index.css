@@ -1,0 +1,14 @@
+body {
+    font-family: Microsoft JhengHei;
+}
+#banner {
+    background-image: url(../images/aboutPic.jpg);
+    background-position: center center;
+    background-size: cover;
+    padding-top: 50px;
+    height: 80px;
+}
+.title {
+    color: #FA8072;
+    font-weight: bold;
+}
