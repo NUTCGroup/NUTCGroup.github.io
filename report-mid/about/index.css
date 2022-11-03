@@ -12,3 +12,10 @@ body {
     color: #FA8072;
     font-weight: bold;
 }
+::-webkit-scrollbar {
+    display: none;
+}
+body{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
