@@ -4,23 +4,13 @@
 	list-style: none;
 	text-decoration: none;
 }
-/*
-a[role=button]{
-	background-color: white;
-	border: 1px solid darkcyan;
-	color: darkcyan;
-	border-radius: 10px;
-	padding: 10px;
-	text-decoration: none;
-	transition-duration: 0.4s;
-	border-radius: 8px;
+::-webkit-scrollbar {
+    display: none;
 }
-a[role=button]:hover{
-	background-color: #aaaaaa;
+body{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
-a[role=button]:active{
-	background-color: #777777;
-}*/
 a{
     text-decoration: none;
     color: #000;

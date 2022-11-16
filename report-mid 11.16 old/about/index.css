@@ -2,7 +2,7 @@ body {
     font-family: Microsoft JhengHei;
 }
 #banner {
-    background-image: url(../images/aboutPic.jpg);
+    background-image: url(../image/4.jpg);
     background-position: center center;
     background-size: cover;
     padding-top: 50px;
@@ -11,4 +11,11 @@ body {
 .title {
     color: #FA8072;
     font-weight: bold;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+body{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
