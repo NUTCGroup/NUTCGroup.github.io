@@ -79,37 +79,10 @@
 			</div>
 		</div>
 	</main>
+	<div id="itemModal"></div>
 	<!-- 第一個商品彈出式視窗 -->
-	<div class="modal fade" id="item1" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="true" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="modalTitleId">原味鮮奶酪</h5>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body container">
-					<div class="row ">
-						<div class="col-5 ">
-							<img src="../image/5.jpeg" alt="no img" class="container-fluid my-1" style="border-radius: 10%;" >
-						</div>
-						<div class="col-7">
-							<h1><b>原味鮮奶酪</b></h1>
-							<span class="fs-2">
-							「單純最能吃出食材的品質」。無其他添加物、細緻柔滑的口感，輕輕一抿就化成醇 醇奶香。
-							</span>
-							<div class="row d-none d-lg-block">
-							<img src="../detail/newItem1/item1.png" alt="" class = "container-fluid ">
-								
-						</div>
-						</div>
-				</div>
-			</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
-					<button type="button" class="btn btn-primary">購選</button>
-				</div>
-		</div>
-	</div>
+	
+	
 	<script>
 		const item1 = new bootstrap.Modal(document.getElementById('item1'), options)
 		
@@ -185,7 +158,8 @@
 	<script>
 		const item3 = new bootstrap.Modal(document.getElementById('item3'), options)
 		
-		</script>
+	</script>
+	<script src="itemModal.js"></script>
 	</div>
 	<footer class="text-center text-bg-dark py-2">© 2022 All Rights Reserved</footer>
 </body>
