@@ -22,6 +22,7 @@ fetch("modal.html").then(r=>r.text()).then(m=>{
 	//eval(`\`${m}\``); // formatted
 	var d = document.documentElement.getElementsByTagName("body")[0]
 	product.forEach((p,i)=>{
+		console.log(typeof i);
 		d.innerHTML += (eval(`\`${m}\``));
 	});
 }) 
