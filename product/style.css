@@ -13,7 +13,7 @@ body{
 	background-color: initial;
 }
 html{
-	background-image: url("../image/1.jpg");
+	background-image: url("../image/defaultBackground.jpg");
 }
 a{
     text-decoration: none;

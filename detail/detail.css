@@ -2,7 +2,7 @@ body {
     font-family: Microsoft JhengHei;
 }
 #banner {
-    background-image: url(../image/1.jpg);
+    background-image: url(../image/defaultBackground.jpg);
     background-position: center center;
     background-size: cover;
     margin-top: 3.5rem;
