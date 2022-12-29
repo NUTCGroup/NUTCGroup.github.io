@@ -3,23 +3,23 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="modalTitleId">
-                    ${}
+                    ${p["title"]}
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body container">
                 <div class="row ">
                     <div class="col-5 ">
-                        <img src="${}" alt="no img" class="container-fluid my-1" style="border-radius: 10%;" >
+                        <img src='${p["image"]}' alt="no img" class="container-fluid my-1" style="border-radius: 10%;" >
                     </div>
                     <div class="col-7">
                         <h1>
                             <b>
-                                ${}
+                                ${p["title"]}
                             </b>
                         </h1>
                         <span class="fs-2">    
-                            ${}                    
+                            ${p["detail"]}                    
                         </span>
                         <div class="row d-none d-lg-block">
                             <img src="../detail/newItem1/item1.png" alt="" class = "container-fluid ">
