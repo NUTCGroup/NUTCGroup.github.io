@@ -73,7 +73,12 @@ img.item:hover{
 	border:#000 1px solid;
 	margin: 10px;
 	margin-top: 15px;
-	height:115px
+	height:115px;
+	transition-duration: 500ms;
+}
+.shoppingcart-value:hover{
+	transition-duration: 250ms;
+	background-color: rgba(0,0,0,0.1)
 }
 #value-title{
 	padding: 10px;
