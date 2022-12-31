@@ -52,13 +52,13 @@ img.item:hover{
 	margin-right: 10px;
 	border-radius: 2%;
 	animation-name: value-animat;
+	animation-fill-mode: forwards;
 	animation-duration:1s;	
 }
 
 #value div:hover{
 	animation-name: value-animat-hover;
-	animation-iteration-count:  infinite;
-	animation-direction: alternate;
+	animation-fill-mode: forwards;
 	animation-duration:1s;
 	
 }
@@ -74,11 +74,16 @@ img.item:hover{
 	margin: 10px;
 	margin-top: 15px;
 	height:115px;
-	transition-duration: 500ms;
+	animation-name: shoppingcart-value-animat;
+	animation-duration:250ms;	
+	animation-fill-mode: forwards;
+
 }
 .shoppingcart-value:hover{
-	transition-duration: 250ms;
-	background-color: rgba(0,0,0,0.1)
+	animation-name: shoppingcart-value-hover-animat;
+	animation-duration:100ms;	
+	animation-fill-mode: forwards;
+	
 }
 #value-title{
 	padding: 10px;
@@ -94,6 +99,9 @@ img.item:hover{
 	height:29vh
 }
 @keyframes value-animat{
+    from{
+        background-color: rgba(0,0,0,0.3);
+    }
     to{
         background-color: rgba(0,0,0,0.2);
     }
@@ -105,5 +113,26 @@ img.item:hover{
     to{
         background-color: rgba(0,0,0,0.3);
 		
+    }
+}
+@keyframes shoppingcart-value-animat{
+    from{
+        display: fixed;
+		height:150px;
+    }
+    to{
+        display: block;
+		height:115px;
+    }
+}
+@keyframes shoppingcart-value-hover-animat{
+    from{
+        display: block;
+		height:115px;
+		
+    }
+    to{
+        display: fixed;
+		height:150px;
     }
 }
