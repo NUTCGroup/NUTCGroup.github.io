@@ -113,6 +113,13 @@ img.item:hover{
 	width: 200px;
 	
 }
+
+.countinput::-webkit-outer-spin-button, .countinput::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+}
+.countinput[type=number] {
+	-moz-appearance: textfield; 
+}
 @keyframes value-animat{
     from{
         background-color: rgba(0,0,0,0.3);
