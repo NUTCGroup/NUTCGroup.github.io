@@ -44,7 +44,6 @@ img.item:hover{
 	transition-duration: 500ms;
 }
 #value div{
-	display: fixed;
 	max-width: 75%;
 	max-height: 75vh;
 	border: #000 1px solid;
@@ -53,13 +52,13 @@ img.item:hover{
 	border-radius: 2%;
 	animation-name: value-animat;
 	animation-fill-mode: forwards;
-	animation-duration:1s;	
+	animation-duration:500ms;	
 }
 
 #value div:hover{
 	animation-name: value-animat-hover;
 	animation-fill-mode: forwards;
-	animation-duration:1s;
+	animation-duration:500ms;
 	
 }
 #shoppingcart{
@@ -75,7 +74,7 @@ img.item:hover{
 	margin-top: 15px;
 	height:115px;
 	animation-name: shoppingcart-value-animat;
-	animation-duration:250ms;	
+	animation-duration:300ms;	
 	animation-fill-mode: forwards;
 
 }
@@ -98,6 +97,22 @@ img.item:hover{
 #value-end{
 	height:29vh
 }
+.countinput{
+	border-width:0px;
+	border:none;
+	border-bottom: gray 2px solid;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	margin: 0px 10px;
+	font-weight: bold;
+	outline:none;
+	text-align: center;
+	background: none;
+	height: 40px;
+	width: 200px;
+}
+
+
 @keyframes value-animat{
     from{
         background-color: rgba(0,0,0,0.3);
@@ -117,22 +132,25 @@ img.item:hover{
 }
 @keyframes shoppingcart-value-animat{
     from{
-        display: fixed;
-		height:150px;
-    }
+		border-radius: 15px;
+		padding: 20px;
+		transform: scale(1.05,1.05);
+    } 
     to{
-        display: block;
-		height:115px;
-    }
+		border-radius: 10px;
+        padding: 15px;
+		transform: scale(1,1);
+    } 
 }
 @keyframes shoppingcart-value-hover-animat{
-    from{
-        display: block;
-		height:115px;
-		
-    }
+	from{
+		border-radius: 10px;
+        padding: 15px;
+		transform: scale(1,1);
+    } 
     to{
-        display: fixed;
-		height:150px;
+		border-radius: 15px;
+		padding: 20px;
+        transform: scale(1.05,1.05);
     }
 }
