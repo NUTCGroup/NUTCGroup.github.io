@@ -1,0 +1,75 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+body{
+	-ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+	background-color: initial;
+}
+html{
+	background-image: url("../image/defaultBackground.jpg");
+}
+img#item{
+    max-width: 50vw;
+    height: 50vh;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+.description{
+    width:100vw;
+}
+.description#title{
+    border-bottom:gray 2px solid;
+}
+.description#content{
+    height: 35vh;
+    max-height: 35vh;
+    border-bottom:gray 2px solid;
+    font-size: larger;
+}
+.description#price{
+    height: 15vh;
+    max-height: 15vh;
+    padding-top: 20px;
+    margin: 10px;
+}
+
+input[type="button"]{
+    background: none;
+    height: 50px;
+    width: 100px;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-bottom: gray 2px solid;
+    animation-name: unclick;
+    animation-fill-mode: forwards;
+    animation-duration: 100ms;
+}
+input[type="button"]:active{
+    animation-name: onclick;
+    animation-fill-mode: forwards;
+    animation-duration: 100ms;
+}
+@keyframes onclick{
+    from{
+        transform: scale(1,1);
+    }
+    to{
+        transform: scale(1.05,1.05);
+    }
+}
+@keyframes unclick{
+    from{
+        transform: scale(1.05,1.05);
+    }
+    to{
+        transform: scale(1,1);
+    }
+}

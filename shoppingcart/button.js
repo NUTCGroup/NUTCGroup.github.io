@@ -29,5 +29,4 @@ function update(){
         cost += countinput[i].value * itemCost[i]
         upd.innerHTML += `${countinput[i].name}: ${countinput[i].value * itemCost[i]}<br>`
     }
-    upd.innerHTML += cost
 }

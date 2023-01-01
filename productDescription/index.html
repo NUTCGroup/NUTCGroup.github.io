@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="../favicon.ico">
+	<title>ミルクチーズ</title>
+	<style>
+		.test{
+			background-color: blue;
+			border:10px solid black;
+		}
+	</style>
+</head>
+<body>
+    <header class="fixed-top">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Third navbar example">
+			<div class="container">
+				<a class="navbar-brand" href="../"><img src="../favicon.ico" class="img-fluid" alt=""><b>ミルクチーズ</b></a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header"
+					aria-controls="header" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse justify-content-md-end" id="header">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="../">首頁</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../about/">關於我們</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled active" href="./">產品介紹</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+    <main>
+        <div class="row container-fluid d-flex justify-content-center">
+            <div class="col-4 ">
+                <div class="d-flex align-items-center justify-content-end" style="height:100vh;">
+                    <img src="https://fakeimg.pl/400x400/?retina=1&text=EXEMPLEIMG&font=noto" id="item">
+                </div>
+            </div>
+            <div class="col-6 ">
+                <div class="d-flex align-items-center align-content-center flex-wrap" style="height:100vh;">
+                    <h1 class="description" id="title" >{EXEMPLE TITLE}</h1>
+                    <div class="description" id="content" >{EXEMPLE CONTENT}</div>
+                    <div class="description d-flex align-items-start justify-content-between" id="price">
+                        <h1>單價：{EXEMPLE PRICE}/個</h1>
+                        <input name="" id="" type="button" value="購選">
+                    </div>
+                    <div class="description d-flex align-items-end justify-content-end" id="sender">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+	<footer class="text-center text-bg-dark py-2 fixed-bottom">© 2022 All Rights Reserved</footer>
+
+</body>
+</html>

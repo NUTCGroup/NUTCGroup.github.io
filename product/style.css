@@ -35,11 +35,41 @@ button.buy:hover{
 button.buy:active{
 	background-color: #777777;
 }
-img.item{
-	transition-duration: 500ms;
+a.item{
+	animation-name: item;
+	animation-fill-mode: forwards;
+	animation-duration:300ms;	
 }
-img.item:hover{
-	-webkit-filter: blur(2px);
-	filter: blur(2px);
-	transition-duration: 500ms;
+a.item img{
+	border-radius: 20px;
+}
+a.item:hover{
+	animation-name: item-hover;
+	animation-fill-mode: forwards;
+	animation-duration:100ms;	
+}
+
+@keyframes item{
+    from{
+		border-radius: 15px;
+		padding: 20px;
+		transform: scale(1.05,1.05);
+    } 
+    to{
+		border-radius: 10px;
+        padding: 15px;
+		transform: scale(1,1);
+    } 
+}
+@keyframes item-hover{
+	from{
+		border-radius: 10px;
+        padding: 15px;
+		transform: scale(1,1);
+    } 
+    to{
+		border-radius: 15px;
+		padding: 20px;
+        transform: scale(1.05,1.05);
+    }
 }
