@@ -32,3 +32,4 @@ fetch("modal.html").then(r=>r.text()).then(m=>{
 		d.innerHTML += (eval(`\`${m}\``));
 	});
 }) 
+d.innerHTML += "<script src='button.js'></script>"
