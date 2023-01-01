@@ -34,7 +34,13 @@
                 <button type="button" value='${p["product"]}' id="sender" class="btn btn-primary">
                     更多
                 </button>
-                <script src="./button.js"></script>
+                <script>
+                    sender = document.getElementById("sender");
+                    console.log("yahhh");
+                    sender.onclick() = function(){
+                        window.open(`../productDescription?product=${this.value}`,"self");
+                    }
+                </script>
             </div>
         </div>
     </div>
