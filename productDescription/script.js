@@ -25,7 +25,8 @@ if (Number.isInteger(id)){
 }else{
 	product = products[0];
 }
-[["title", "name"],["content", "description"],["price_", "price"]].forEach((e)=>{
-	document.getElementById(e[0]).innerHTML = product[e[1]].toString();
+[["title", "innerHTML", "name"],["content", "innerHTML", "description"],["price_", "innerHTML", "price"], ["item", "src", "image"]].forEach((e)=>{
+	//document.getElementById(e[0]).innerHTML = product[e[1]].toString();
+	document.getElementById(e[0])[e[1]] = product[e[2]].toString();
 })
-document.getElementById("item").src=product["image"];
+//document.getElementById("item").src=product["image"];
