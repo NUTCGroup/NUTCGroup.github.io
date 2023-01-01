@@ -39,7 +39,11 @@ img#item{
     padding-top: 20px;
     margin: 10px;
 }
-
+main{
+    animation-name: main;
+    animation-fill-mode: forwards;
+    animation-duration: 600ms;
+}
 input[type="button"]{
     background: none;
     height: 50px;
@@ -52,10 +56,24 @@ input[type="button"]{
     animation-fill-mode: forwards;
     animation-duration: 100ms;
 }
-input[type="button"]:active{
+
+input[type="button"]:hover{
     animation-name: onclick;
     animation-fill-mode: forwards;
     animation-duration: 100ms;
+}
+@keyframes main {
+    0%{
+        opacity: 0;
+        transform: scale(0.1,0.1)
+    }
+    40%{
+        opacity: 1;
+        transform: scale(1.1,1.1)
+    }
+    100%{
+        transform: scale(1,1)
+    }
 }
 @keyframes onclick{
     from{
