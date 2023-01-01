@@ -55,13 +55,13 @@
             </div>
             <div class="col-6 ">
                 <div class="d-flex align-items-center align-content-center flex-wrap" style="height:100vh;">
-                    <h1 class="description" id="title" >{EXEMPLE TITLE}</h1>
-                    <div class="description" id="content" >{EXEMPLE CONTENT}</div>
+                    <h1 class="description" id="title"></h1>
+                    <div class="description" id="content"></div>
                     <div class="description d-flex align-items-start justify-content-between" id="price">
-                        <h1>單價：{EXEMPLE PRICE}/個</h1>
+                        <h1>單價：<span id="price_"> </span>/個</h1>
                         <input name="" id="" type="button" value="前往購選頁面">
                     </div>
-                    <div class="description d-flex align-items-end justify-content-end" id="sender">
+                    <div class="description d-flex align-items-end justify-content-end" id="sender" onloadbegin="console.log(123)">
                     </div>
                     
                 </div>
@@ -69,6 +69,6 @@
         </div>
     </main>
 	<footer class="text-center text-bg-dark py-2 fixed-bottom">© 2022 All Rights Reserved</footer>
-
+	<script src="script.js"></script>
 </body>
 </html>
