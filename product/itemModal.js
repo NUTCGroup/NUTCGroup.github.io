@@ -31,5 +31,5 @@ fetch("modal.html").then(r=>r.text()).then(m=>{
 		console.log(typeof i);
 		d.innerHTML += (eval(`\`${m}\``));
 	});
-	d.innerHTML += "<script src='button.js'></script>"
+	d.innerHTML += "<script></script>"
 }) 
