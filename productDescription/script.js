@@ -26,6 +26,6 @@ if (Number.isInteger(id)){
 	product = products[0];
 }
 [["title", "name"],["content", "description"],["price_", "price"]].forEach((e)=>{
-	document.getElementById(e[0]).innerText = product[e[1]].toString();
+	document.getElementById(e[0]).innerHTML = product[e[1]].toString();
 })
 document.getElementById("item").src=product["image"];
