@@ -49,6 +49,36 @@ a.item:hover{
 	animation-duration:100ms;	
 }
 
+a.button[type="button"]{
+	background: none;
+	border-bottom:gray solid 2px;
+	min-width: 50px;
+	padding: 0px 10px;
+	margin: 0px;
+	transition-duration: 3s;
+}
+a.button[type="button"]:hover{
+	color:#000;
+	animation-name:button-hover;
+	transition-duration: 2s;
+	transform: rotate(5deg);
+	animation-duration: 4s;
+	animation-delay: 2s;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+
+
+@keyframes button-hover{
+	0%{
+		transform: rotate(5deg);
+	}
+	100%{
+		transform: rotate(-5deg);
+	}
+
+}
 @keyframes item{
     from{
 		border-radius: 15px;
