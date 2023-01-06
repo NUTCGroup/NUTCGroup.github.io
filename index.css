@@ -1,10 +1,11 @@
-body{
+#index{
     font-family: Microsoft JhengHei;
     background-image: url(./image/defaultBackground.jpg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: center center;
     background-size: cover;
+
+    
 }
 img{
     border-radius: 20px;
@@ -28,15 +29,15 @@ img{
 	text-decoration: none;
 }
 /* main */
-header{
+/* header{
     font-family: Microsoft JhengHei;
     background-image: url(../image/1.jpg);
-    /* height: 300px; */
+    /* height: 300px; 
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-}
+} */
 .col-lg-5{
     background-color: rgba(105, 203, 241, 0.62);
 }
@@ -204,10 +205,10 @@ span.icon{
     align-items: center;
 }
 .nameButton{
-    transition-duration: 2s;
+    transition-duration: 1s;
     display: block;
 }
 .nameButton:hover{
-    width: 1200px;
-    transform: scale;
+    transition-duration: 0.5s;
+    transform: scale(1.1,1.1);
 }
