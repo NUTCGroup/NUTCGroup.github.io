@@ -196,3 +196,18 @@ span.icon{
 .manber .containt button{
     margin: 10px;
 }
+.name{
+    height: 100%;
+    background-color: #aaaaaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nameButton{
+    transition-duration: 2s;
+    display: block;
+}
+.nameButton:hover{
+    width: 1200px;
+    transform: scale;
+}
