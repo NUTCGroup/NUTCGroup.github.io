@@ -92,7 +92,7 @@ button{
     font-weight: bold;
 }
 
-a{
+a.a{
     text-decoration: none;
     color: #000;
 }
@@ -168,3 +168,8 @@ span.icon{
 }
 
 
+.manber{
+    background-color: gray;
+    text-align: center;
+    margin: 0px 10px;
+}
