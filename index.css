@@ -167,9 +167,32 @@ span.icon{
     height: 350px;
 }
 
-
 .manber{
-    background-color: gray;
-    text-align: center;
+    background-color: none;
+    display: flex;
+    align-items: center;
     margin: 0px 10px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+
+}
+
+.manber div.name{
+    width: 200px;
+    
+}
+
+.manber .containt{
+    height: 200px;  
+    
+}
+.manber .containt div{
+    height: 150px;  
+    padding: 10px;
+    border-bottom: gray solid 2px;
+    font-size: 20px;
+}
+.manber .containt button{
+    margin: 10px;
 }
