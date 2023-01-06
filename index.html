@@ -1,57 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    />
-    <title>ミルクチーズ</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="index.css" />
-    <link rel="icon" href="icon.ico">
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="../"><img src="./icon.ico" class="img-fluid" alt="" style="height:30px;width:30px"><b>ミルクチーズ</b></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./">首頁</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./about/">關於我們</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./product/">產品介紹</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <div class="row g-0 justify-content-center align-items-center text">
-        <div class="col-lg-5 text-center text-white p-2">
-          <p class="fs-1">鮮奶酪</p>
-          <p class="fs-3">鮮奶酪是一種食品，乳脂含量較高，口感滑爽。鮮奶酪像鮮奶油那樣甜美，有黃油那樣的濃厚味道，口感和加工方式與酸奶相似，其風味獨特、營養豐富，並具有特殊的保健功能。
-            是有名的意大利蛋糕配料，直接塗抹在面包上食用，美味可口</p>
-          <!-- 產品內容 -->
-      </div>
-    </header>
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		/>
+		<title>醇真</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/3863ac1243.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="./index.css">
+		<link rel="icon" href="icon.ico">
+	</head>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+				<div class="container">
+					<a class="navbar-brand" href="../"><img src="../icon.ico" class="img-fluid" alt=""><b style="letter-spacing: 8px;font-size: 25px;">醇真</b></a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#navbarNav"
+						aria-controls="navbarNav"
+						aria-expanded="false"
+						aria-label="Toggle navigation" >
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item">
+								<a class="nav-link active" aria-current="page" href="#index">首頁</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#product">產品介紹</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#about">關於我們</a>
+							</li>
+							<li class="nav-item position-relative">
+								<div class="btn-group">
+									<button class="btn btn-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+										<i class="fa-solid fa-cart-shopping"></i>
+										<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+									</button>
+									<table class="dropdown-menu dropdown-menu-end p-3" style="min-width: 380px;">
+										<thead>
+											<tr>
+												<th width="50"></th>
+												<th width="100"></th>
+												<th width="150">商品名稱</th>
+												<th width="100">數量</th>
+												<th width="30">小計</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="text-center">
+													<i class="fa-solid fa-trash"></i>
+												</td>
+												<td class="align-middle">
+													<img src="image/originalCotta.jpeg" style="width:50px;">
+												</td>
+												<td class="align-middle">原味鮮奶酪</td>
+												<td class="align-middle">1杯</td>
+												<td class="align-middle text-right">$40</td>
+											</tr>
+											<tr>
+												<td colspan="4">運費</td>
+												<td class="text-right">
+													<strong>$60</strong>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="4">合計</td>
+												<td class="text-right">
+													<strong>$100</strong> 
+													<!-- 合計值 -->
+												</td>
+											</tr>
+											
+										</tbody>
+										<tfoot>
+											<tr>
+												<td colspan="4">
+													<a href="shopping01.html">
+														<button type="button" class="btn btn-primary btn-block">去結帳</button>
+													</a>
+												</td>
+											</tr>
+										</tfoot>
+									</table>
+								</div>
+
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div class="row g-0 justify-content-center align-items-center text" id="index">
+				<div class="col-lg-5 text-center text-white p-2">
+					<p class="fs-1">鮮奶酪</p>
+					<p class="fs-8">鮮奶酪是一種食品，乳脂含量較高，口感滑爽。鮮奶酪像鮮奶油那樣甜美，有黃油那樣的濃厚味道，口感和加工方式與酸奶相似，其風味獨特、營養豐富，並具有特殊的保健功能。
+						是有名的意大利蛋糕配料，直接塗抹在面包上食用，美味可口</p>
+					<!-- 產品內容 -->
+			</div>
+		</header>
+
+		<!-- threebox -->
+			<div class="row" id="trapCardclass">
+					<div class="trapCard col">
+							<span class="icon"><i class="fa-solid fa-cow "></i></span>
+							<h3>乳源簡介</h3>
+							<p class="b">主恩牧場:主恩從事酪農事業已有50年老歷史的牧場，目前由第二代牧場主人柯豐正所經營。隨著時代的改變，消費者購物習慣與生活方式也推動著傳統酪農業做出許多改革---最重要的即為科技改革。</p>
+					</div>
+					<div class="trapCard col">
+							<span class="icon" style="color: rgb(255, 110, 99);"><i class="fa-solid fa-heart"></i></span>
+							<h3>最用心的態度</h3>
+							<p class="b">隨著推廣的時域與地域被解除後，更多的消費者將有機會品嚐到我們在地小農的甘醇美味，期待您能加入我的的行列，一同致力為台灣小農作推廣，品嚐台灣在地好滋味。
+							</p>
+					</div>
+					<div class="trapCard col">
+							<span class="icon"><i class="fa-solid fa-truck"></i></span>
+							<h3>最快的配送速度</h3>
+							<p class="b">只有你想不到沒有我們送不到，您今天購明天就能夠收到貨，親愛的購客您是電是光是唯一的神話能夠服務您是我畢生的榮幸是我上輩子修來的福氣。</p>
+					</div>
+			</div>
+		<!-- product -->
+		<div class="album py-5" id="product">
+				<div class="container">
+						<h1><b>|產品介紹</b></h1>
+						<div class="row">
+								<div class="col">
+										<div onclick="window.open('./productDescription/index.html?product=0','_self')" class="card shadow-sm boxone">
+												<img src="image/originalCotta.jpeg" class="img-fluid rounded-top" alt="ummm">
+												<div class="card-body">
+														<h2>原味鮮奶酪</h2>
+														「單純最能吃出食材的品質」。無其他添加物、細緻柔滑的口感，輕輕一抿就化成醇 醇奶香。
+														<div class="d-flex justify-content-end">
+																<button type="button" class="buy" data-bs-toggle="modal" data-bs-target="#buy">
+																		更多詳情
+																</button>
+														</div>
+												</div>
+											</div>
+								</div>
+								<div class="col">
+										<div onclick="window.open('./productDescription/index.html?product=1','_self')" class="card shadow-sm boxone">
+												<img src="image/almondCotta.jpg" class="img-fluid rounded-top" width="100%" alt="ummm">
+												<div class="card-body">
+														<h2>杏仁鮮奶酪</h2>
+														杏仁片研磨後熬煮而成，在保有奶味的同時，也不會搶走杏仁的風采，每一口都充滿濃濃的杏仁香。
+														<div class="d-flex justify-content-end">
+																<button type="button" class="buy" data-bs-toggle="modal" data-bs-target="#buy">
+																		更多詳情
+																</button>
+														</div>
+												</div>
+											</div>
+								</div>
+								<div class="col">
+										<div onclick="window.open('./productDescription/index.html?product=2','_self')" class="card shadow-sm boxone">
+												<img src="image/taroCotta.jpg" class="img-fluid rounded-top" width="100%" alt="ummm">
+												<div class="card-body">
+														<h2>芋頭鮮奶酪</h2>
+														芋頭炊熟後手工研磨成芋泥，最大限度保留芋頭香氣與Q彈 口感，不甜不膩，值得您細細品味。
+														<div class="d-flex justify-content-end">
+																<button type="button" class="buy" data-bs-toggle="modal" data-bs-target="#buy">
+																		更多詳情
+																</button>
+														</div>
+												</div>
+											</div>
+								</div>
+						</div>
+				</div>
+		</div>
+		<!-- ani -->
+		<div>
+		<div id="descriptions">
+			<div class="description">
+					<img src="image/milkplace.jpg" class="aniPic">
+					<div class="f align-self-center">
+							<h3>牛乳產地</h3>
+							<p>主恩鮮奶秉持不斷精益求精，在鮮乳生產的環節裡，務求每個階段都要有嚴格的SOP；柯先生也不斷投資設備與牛隻，他購買大型自動化設備，建立完整的冷鏈(全程低溫控管)、親自到澳洲引進最佳狀態的乳牛，不斷提升鮮奶品質，所有的堅持，只為了讓消費者可以購買到最新鮮、最高品質的鮮奶。
+							<p>地址： 504彰化縣秀水鄉彰鹿路72巷51號</p>
+					</div>
+			</div>
+			<div class="arrow">
+				<img src="image/arrow-4.svg" alt="">
+			</div>
+			<div class="description">
+				<div class="f align-self-center">
+					<h3>鮮乳直送</h3>
+					<p>製作過程將鮮奶油、牛奶、砂糖混
+						合後，再加入香草籽一起加熱，最後加入已融化的吉
+						利丁等凝膠膠體後，放涼凝固即可完成。
+					</p>
+				</div>
+				<img src="./image/mangoCotta.jpg" class="aniPic">
+			</div>
+			<div class="arrow">
+				<img src="./image/arrow-3.svg">
+			</div>
+			<div class="description">
+				<img src="./image/reportImage.png" class="aniPic">
+				<div class="f align-self-center">
+					<h3>新鮮出爐</h3>
+					<p>須冷藏七度以下。建議收到奶酪時先將手提盒蓋打開冷藏，以確保奶酪冷藏度足夠，放置常溫勿超過半小時。</p>
+							<p>口感隨溫度變化有些微不同，若有液化屬正常現象。請冷藏回復正常後食用，以確保最佳風味。</p>
+					<P>保存天數：10天</P>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- about 
+	<div class="container m-5" id="about">
+		<div class="row g-5" style="padding-left: 60px;">
+				<div class="col-lg align-self-center ">
+						<h2 class="title mt-3">| 關於我們</h2>
+						<p class="p-3">愛是我們心裡的一棟小屋，保護著最重要的人。臻藏秉持初心，以愛傳遞新鮮與幸福，給您最天然無添加的健康乳製甜點。</p>
+				</div>
+				<div class="col-lg order-lg-first">
+						<img src="image/shopImage-1.jpg" class="img-fluid">
+				</div>
+		</div>
+		
+		<div class="row g-5 mt-2" style="padding-left: 60px;">
+				<div class="col-lg align-self-center">
+						<h2 class="title mt-3">| 乳質來源</h2>
+						<p class="p-3">臻藏與在地牧場合作，直接取得剛出產的生乳，以產地直送的新鮮純香，熬煮高溫殺菌，再以快速冷卻法在20分鐘內降至10度，把濃厚牛奶味封住，為消費者提供最健康的乳製甜點。</p>
+				</div>
+				<div class="col-lg order-lg-first">
+						<img src="image/shopImage-2.jpg" class="img-fluid">
+				</div>
+		</div>
+	</div>
+<footer class="text-center bg-dark text-white py-1">
+	<p style="padding-top: 15px;">&copy;僅做練習使用,不提供商業用途</p>
+-->
+<script src="index.js"></script>
+</footer>
+
 </html>
 
 

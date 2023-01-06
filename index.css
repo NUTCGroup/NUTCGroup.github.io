@@ -6,6 +6,9 @@ body{
     background-position: center center;
     background-size: cover;
 }
+img{
+    border-radius: 20px;
+}
 .col-lg-5{
     background-color: rgba(105, 203, 241, 0.62);
 }
@@ -15,3 +18,153 @@ body{
 .text {
     height: 100vh;
 }
+
+
+/* new */
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+/* main */
+header{
+    font-family: Microsoft JhengHei;
+    background-image: url(../image/1.jpg);
+    /* height: 300px; */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+.col-lg-5{
+    background-color: rgba(105, 203, 241, 0.62);
+}
+.ourname{
+    font-size: 25px;
+}
+.text {
+    height: 100vh;
+}
+button{
+    position: relative;
+    color: #fff;
+    background-color: #000;
+}
+
+/* product */
+
+.boxone{
+    transition-duration: 250ms;
+    min-width: 350px;
+    max-width: 450px;
+    margin: 20px auto;
+    position: relative;
+    bottom: 0px;
+    left: 0;
+}
+.boxone img{
+    border-radius: 0;
+}
+.boxone:hover{
+    transition-duration: 250ms;
+    bottom: 10px;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+/* about */
+#banner {
+    background-image: url(../images/aboutPic.jpg);
+    background-position: center center;
+    background-size: cover;
+    padding-top: 50px;
+    height: 80px;
+}
+.title {
+    color: #FA8072;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+button.buy{
+	background-color: white;
+	border: 1px solid darkcyan;
+	color: darkcyan;
+	border-radius: 10px;
+	padding: 10px;
+	text-decoration: none;
+	transition-duration: 0.4s;
+	border-radius: 8px;
+}
+button.buy:hover{
+	background-color: #aaaaaa;
+}
+button.buy:active{
+	background-color: #777777;
+}
+.trapCard{
+    background-color:rgba(51, 51, 51, 0.62);
+    
+    border-radius: 10px;
+    color:white;
+    padding: 25px;
+    min-height: 350px;
+    max-height: 450px;
+    width:300px;
+    min-width: 300px;
+    margin:50px;
+ } 
+.trapCard:hover>span>i{
+    transition-duration: 500ms;
+    transform: scale(1.1,1.1);
+}
+.trapCard>span.icon>i{
+    transition-duration: 500ms;
+}
+span.icon{
+    font-size: 70px;
+}
+
+/* ani */
+#product{
+    background-color:rgba(51, 51, 51, 0.62);
+    
+}
+
+#descriptions{
+    background-color:#ffffff; 
+    display: flex;/*排版類型*/
+    flex-direction: column;/*排序方向改成欄*/
+    /* flex-wrap: wrap;  換行*/
+    justify-content: center;/*垂直對其 其實是水平*/
+    align-items: center;/*水平對其 其實是垂直*/
+    padding: 50px 0;
+ } 
+.description{
+    padding: 10px;
+    border-radius: 10px;
+}
+.description{
+    display:flex;
+    margin:20px;
+}
+.f{
+    margin:30px;
+    width: 500px;
+}
+.aniPic{
+    width: 500px;
+    height: 350px;
+}
+
+
