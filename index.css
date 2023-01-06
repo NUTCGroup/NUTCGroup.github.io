@@ -4,14 +4,9 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-
-    
 }
 img{
     border-radius: 20px;
-}
-.col-lg-5{
-    background-color: rgba(105, 203, 241, 0.62);
 }
 .ourname{
     font-size: 25px;
@@ -39,7 +34,7 @@ img{
     background-size: cover;
 } */
 .col-lg-5{
-    background-color: rgba(105, 203, 241, 0.62);
+    background-color: rgba(30, 153, 202, 0.62);
 }
 .ourname{
     font-size: 25px;
@@ -206,9 +201,11 @@ span.icon{
 }
 .nameButton{
     transition-duration: 1s;
-    display: block;
+    background-color: #aaaaaa;
+    border-radius: 10px;
 }
 .nameButton:hover{
     transition-duration: 0.5s;
-    transform: scale(1.1,1.1);
+    background-color: #999999;
+    border-radius: 0px;
 }
