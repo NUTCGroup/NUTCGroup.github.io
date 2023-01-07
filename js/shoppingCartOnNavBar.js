@@ -104,7 +104,7 @@ class shoppingCartOnNavBar{
 				this.#Cart[i] = value;
 			}
 		};
-		for (e in this.#Cart) this.#displayToCart(e);
+		for (e in this.#Cart) console.log(e);
 		return;
 	}
 }
