@@ -79,9 +79,9 @@ class shoppingCartOnNavBar{
 	static #updateCookie(){
 		for (var i=0; i<3; i++){
 			if (i in Object.keys(this.#Cart)){
-				cookie.setCookie(i,this.#Cart[i],1);
+				cookie.setCookie(`p${i}`,this.#Cart[i],1);
 			}else{
-				cookie.setCookie(i,0,0);
+				cookie.setCookie(`p${i}`,0,0);
 			};
 		
 		};
@@ -89,7 +89,7 @@ class shoppingCartOnNavBar{
 	}
 	static loadFromCookie(){
 		for (var i=0; i<3; i++){
-			var value = parseInt(cookie.getCookie(i)) 
+			var value = parseInt(cookie.getCookie(`p${i}`)) 
 			if (Number.isInteger(value) && value <= 1000 && value > 0){
 				this.#Cart[i] = value;
 			}
