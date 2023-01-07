@@ -35,7 +35,6 @@ img#item{
     font-size: 30px;
 }
 .description#onpay{
-    border-bottom:gray 4px solid;
     height: 10vh;
     display: flex;
     justify-self: end;
