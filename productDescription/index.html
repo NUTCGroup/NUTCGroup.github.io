@@ -18,7 +18,7 @@
 </head>
 <body>
     <header class="fixed-top">
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Third navbar example">
+		<nav class="navbar navbar-expand-lg navbar-dark" aria-label="Third navbar example" style="background-color: rgb(211, 120, 95);">
 			<div class="container">
 				<a class="navbar-brand" href="../"><img src="../icon.ico" class="img-fluid" alt="" style="height:30px;width:30px"><b>醇真</b></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header"
@@ -39,7 +39,7 @@
 						</li>
 						<li class="nav-item position-relative">
 							<div class="btn-group">
-								<button class="btn btn-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false"  style="background-color: rgb(211, 120, 95);">
 									<i class="fa-solid fa-cart-shopping"></i>
 									<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="shoppingCartOnNavBarTotalAmount" style="display: none;">0</span>
 								</button>
@@ -111,12 +111,11 @@
 					<div class="description" id="onpay">
 						<div class="" id="payCount">
 
-								<div id="contain">立即加入購物車：</div>
+								<div id="contain">數量：</div>
 								<div id="input"> 
 									<input type="number" max="1000" min="0" value="0">
 								</div>
 								<button name="sender" id="sender" class="btn" value="0" role="button">添加到購物車</button>
-							
 						</div>
 					</div>
                     <div class="description d-flex align-items-start justify-content-between" id="price">
@@ -130,7 +129,7 @@
             </div>
         </div>
     </main>
-	<footer class="text-center text-bg-dark py-2 fixed-bottom">&copy;僅做練習使用,不提供商業用途</footer>
+	<footer class="text-center py-2 fixed-bottom" style="background-color: rgb(211, 120, 95);">&copy;僅做練習使用,不提供商業用途</footer>
 	<script src="../js/loadProducts.js"></script>
 	<script src="../js/shoppingCartOnNavBar.js"></script>
 
