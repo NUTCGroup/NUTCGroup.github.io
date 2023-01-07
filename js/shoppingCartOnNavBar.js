@@ -69,6 +69,7 @@ class shoppingCartOnNavBar{
 			this.#displayToCart(product);
 		}
 		this.#updateTotal();
+		this.#updateCookie();
 		return;
 	}
 	static #updateTotal(){
@@ -89,7 +90,7 @@ class shoppingCartOnNavBar{
 			total += products[e].price * this.#Cart[e];
 		});
 		this.#footerholder.innerHTML = `<tr><td colspan="4">運費</td><td class="text-right"><strong>$60</strong></td></tr><tr><td colspan="4">合計</td><td class="text-right"><strong>$${total}</strong></td></tr>`;
-		this.#updateCookie();
+		return;
 	}
 	static #updateCookie(){
 		for (var i=0; i<3; i++){ 
@@ -113,6 +114,7 @@ class shoppingCartOnNavBar{
 	}
 	static displayAll(){
 		Object.keys(this.#Cart).forEach((e)=>{this.#displayToCart(e)})
+		this.#updateTotal();
 	}
 	//static loadFromURL(){
 	//	var box = (new URL(location.href)).searchParams;

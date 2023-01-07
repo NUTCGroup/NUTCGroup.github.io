@@ -1,0 +1,1 @@
+shoppingCartOnNavBar.displayAll();

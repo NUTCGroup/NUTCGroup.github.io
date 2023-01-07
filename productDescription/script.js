@@ -44,3 +44,4 @@ snd.onclick = function(){
 		inp.value = 0;
 	}
 }
+shoppingCartOnNavBar.displayAll();
