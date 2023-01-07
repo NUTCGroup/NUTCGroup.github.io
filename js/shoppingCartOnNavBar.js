@@ -57,6 +57,7 @@ class shoppingCartOnNavBar{
 			total += products[e].price * this.#Cart[e];
 		});
 		this.#footerholder.innerHTML = `<tr><td colspan="4">運費</td><td class="text-right"><strong>$60</strong></td></tr><tr><td colspan="4">合計</td><td class="text-right"><strong>$${total}</strong></td></tr>`;
+		this.updateTotalAmount();
 		return;
 	}
 	static #updateCookie(){
@@ -92,7 +93,6 @@ class shoppingCartOnNavBar{
 		document.getElementById(`navbarProduct-${product}`).remove();
 		this.#Cart[product] = 0;
 		this.updateTotal();
-		this.updateTotalAmount();
 		this.#updateCookie();
 	}
 	static updateTotalAmount(){
