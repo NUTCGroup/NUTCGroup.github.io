@@ -149,8 +149,6 @@ span.icon{
 .description{
     padding: 10px;
     border-radius: 10px;
-}
-.description{
     display:flex;
     margin:20px;
 }
