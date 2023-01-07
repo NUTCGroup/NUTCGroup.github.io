@@ -210,6 +210,10 @@ span.icon{
     border-radius: 0px;
 }
 
+img#xyz:hover{
+    content: url(./image/XYZicon2.gif);
+}
+
 img#eluo:hover {
     animation-name: eluo;
     animation-duration: 2s;
