@@ -1,4 +1,4 @@
-// load loadProducts.js before loading ti<3his
+// load loadProducts.js before loading this
 class cookie{ // https://www.w3schools.com/js/js_cookies.asp
 	static setCookie(cname, cvalue, exdays) {
 		const d = new Date();
