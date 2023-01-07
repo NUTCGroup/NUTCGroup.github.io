@@ -9,7 +9,8 @@ if (Number.isInteger(id)){
 	["title", "innerHTML", "name"],
 	["content", "innerHTML", "description"],
 	["price_", "innerHTML", "price"], 
-	["item", "src", "image"]].forEach((e)=>{
+	["item", "src", "image"]
+].forEach((e)=>{
 	document.getElementById(e[0])[e[1]] = product[e[2]].toString();
 })
 
@@ -39,7 +40,7 @@ snd.onclick = function(){
 		},1000)
 	}
 	else{
-		shoppingCartOnNavBar.displayToCart(snd.value);
-		inp.value = 0
+		shoppingCartOnNavBar.addToCart(snd.value,parseInt(inp.value));
+		inp.value = 0;
 	}
 }
