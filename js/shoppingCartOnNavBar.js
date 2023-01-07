@@ -77,11 +77,11 @@ class shoppingCartOnNavBar{
 		return;
 	}
 	static #updateCookie(){
-		for (var i=0; i<3; i++){ 
+		for (var i=0; i<3; i++){
 			if (i in Object.keys(this.#Cart)){
 				cookie.setCookie(i,this.#Cart[i],1);
 			}else{
-				cookie.setCookie(i,"",0);
+				cookie.setCookie(i,0,0);
 			};
 		
 		};
