@@ -27,6 +27,9 @@ class shoppingCartOnNavBar{
 	static #Cart = {};
 	static displayToCart(product){
 		if (!(product in [0,1,2])) throw "invaild product id";
+		if(this.#Cart[product] <= 0){
+			return
+		}
 		var amount = (this.#Cart[product] ? this.#Cart[product] : 0);
 		this.#holder.innerHTML += `<tr id='navbarProduct-${product}'><td class='text-center'><i class='fa-solid fa-trash' onclick="shoppingCartOnNavBar.removeFromCart(${product})"></i></td><td class='align-middle'><img src='${products[product].image}' style='width:50px;'></td><td class='align-middle'>${products[product].name}</td><td class='align-middle'><span class="navbarProduct_amount">${amount}</span>杯</td><td class='align-middle text-right'>$<span class="navbarProduct_total">${amount * products[product].price}</span></td></tr>`;
 		return;
