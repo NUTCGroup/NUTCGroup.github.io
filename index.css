@@ -245,6 +245,7 @@ img#eluo:hover {
     background-image: url("https://media.tenor.com/x8v1oNUOmg4AAAAd/rickroll-roll.gif");
     /* transform: scale(5,5);
     background-size: 10%; */
+    transition-delay: 1s;
     z-index: 1000;
     animation-name: betterRick;
     animation-delay: 5s;
