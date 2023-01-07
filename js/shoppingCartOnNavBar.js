@@ -85,7 +85,7 @@ class shoppingCartOnNavBar{
 	}
 	static removeFromCart(product){
 		document.getElementById(`navbarProduct-${product}`).remove();
-		delete this.#Cart[product];
+		this.#Cart[product] = 0;
 		this.updateTotal();
 		this.#updateCookie();
 	}
