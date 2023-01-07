@@ -25,9 +25,9 @@ class shoppingCartOnNavBar{
 	static #holder = document.getElementById("shoppingCartOnNavBarProducts"); 
 	static #footerholder = document.getElementById("shoppingCartOnNavBarFooter"); 
 	static #Cart = {};
-	static displayToCart(product){
+	static displayToCart(product,ex = true){
 		if (!(product in [0,1,2])) throw "invaild product id";
-		if(this.#Cart[product] <= 0){
+		if(this.#Cart[product] <= 0 && ex){
 			return
 		}
 		var amount = (this.#Cart[product] ? this.#Cart[product] : 0);
@@ -84,8 +84,8 @@ class shoppingCartOnNavBar{
 		};
 		return;
 	}
-	static displayAll(){
-		Object.keys(this.#Cart).forEach((e)=>{this.displayToCart(e)})
+	static displayAll(ex = true){
+		Object.keys(this.#Cart).forEach((e)=>{this.displayToCart(e,ex)})
 		this.updateTotal();
 	}
 	static removeFromCart(product){
