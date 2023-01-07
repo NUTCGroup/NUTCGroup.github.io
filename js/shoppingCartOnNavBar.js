@@ -27,7 +27,7 @@ class shoppingCartOnNavBar{
 	static #Cart = {};
 	static displayToCart(product,ex = true){
 		if (!(product in [0,1,2])) throw "invaild product id";
-		if(this.#Cart[product] <= 0 && ex){
+		if((this.#Cart[product] <= 0) && ex){
 			return
 		}
 		var amount = (this.#Cart[product] ? this.#Cart[product] : 0);
