@@ -102,13 +102,27 @@ font-weight: bolder;
     display: flex;
     align-self: end;
 }
-.description#onpay div#payCount a#sender{
-
+.description#onpay div#payCount button#sender{
+    transition: 1s;
     border-bottom: gray solid 2px;
     border-radius: 0px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     height: 40px;
+    width: 150px;
     margin: 10px;
     font-size: 20px;
+}
+.description#onpay div#payCount button#sender:hover{
+    transition: 500ms;
+
+    transform: scale(1.02,1.02);
+
+}
+.description#onpay div#payCount button#sender:active{
+    transition: 1s steps(0,1);
+    transform: scale(1.05,1.05);
+
 }
 
 .description#price{
