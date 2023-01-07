@@ -289,7 +289,7 @@ div#eason:active > img#eluo {
     animation-name: betterRick;
     animation-delay: 6s;
     animation-direction: normal;
-    animation-timing-function: linear;
+    animation-timing-function:ease-in-out;
     animation-duration: 5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
