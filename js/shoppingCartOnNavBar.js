@@ -94,8 +94,12 @@ class shoppingCartOnNavBar{
 		this.updateTotal();
 	}
 	static removeFromCart(product){
-		if (this.minAmount > 0) document.getElementById(`navbarProduct-${product}`).remove();
-		this.#Cart[product] = 0;
+		if (this.minAmount > 0) {
+			document.getElementById(`navbarProduct-${product}`).remove()
+			this.#Cart[product] = 0;
+		}else{
+			this.setProductAmountInCart(product,0);
+		};
 		this.updateTotal();
 		this.#updateCookie();
 	}
