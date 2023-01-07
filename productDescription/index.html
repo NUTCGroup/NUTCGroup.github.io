@@ -12,19 +12,13 @@
 		crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" href="../icon.ico">
-	<title>ミルクチーズ</title>
-	<style>
-		.test{
-			background-color: blue;
-			border:10px solid black;
-		}
-	</style>
+	<title>醇真</title>
 </head>
 <body>
     <header class="fixed-top">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Third navbar example">
 			<div class="container">
-				<a class="navbar-brand" href="../"><img src="../icon.ico" class="img-fluid" alt="" style="height:30px;width:30px"><b>ミルクチーズ</b></a>
+				<a class="navbar-brand" href="../"><img src="../icon.ico" class="img-fluid" alt="" style="height:30px;width:30px"><b>醇真</b></a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#header"
 					aria-controls="header" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -40,6 +34,59 @@
 						</li>
 						<li class="nav-item">
 							<a class="nav-link disabled active" href="./">產品介紹</a>
+						</li>
+						<li class="nav-item position-relative">
+							<div class="btn-group">
+								<button class="btn btn-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+									<i class="fa-solid fa-cart-shopping"></i>
+									<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+								</button>
+								<table class="dropdown-menu dropdown-menu-end p-3" style="min-width: 380px;">
+									<thead>
+										<tr>
+											<th width="50"></th>
+											<th width="100"></th>
+											<th width="150">商品名稱</th>
+											<th width="100">數量</th>
+											<th width="30">小計</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-center">
+												<i class="fa-solid fa-trash"></i>
+											</td>
+											<td class="align-middle">
+												<img src="image/originalCotta.jpeg" style="width:50px;">
+											</td>
+											<td class="align-middle">原味鮮奶酪</td>
+											<td class="align-middle">1杯</td>
+											<td class="align-middle text-right">$40</td>
+										</tr>
+										<tr>
+											<td colspan="4">運費</td>
+											<td class="text-right">
+												<strong>$60</strong>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="4">合計</td>
+											<td class="text-right">
+												<strong>$100</strong> 
+											</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="4">
+												<a href="shopping01.html">
+													<button type="button" class="btn btn-primary btn-block">去結帳</button>
+												</a>
+											</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -79,7 +126,8 @@
             </div>
         </div>
     </main>
-	<footer class="text-center text-bg-dark py-2 fixed-bottom">© 2022 All Rights Reserved</footer>
+	<footer class="text-center text-bg-dark py-2 fixed-bottom">&copy;僅做練習使用,不提供商業用途</footer>
+	<script src="../js/loadProducts.js"></script>
 	<script src="script.js"></script>
 </body>
 </html>
