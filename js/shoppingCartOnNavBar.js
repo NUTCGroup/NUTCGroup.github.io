@@ -129,7 +129,7 @@ class shoppingCartOnNavBar{
 		}else if(!Number.isInteger(amount)){ 
 			amount = parseInt(amount);
 		}
-		amount = Math.max(Math.min(1000,amount),this.minAmount);
+		//amount = Math.max(Math.min(1000,amount),this.minAmount); filtered in setProductAmountInCart function
 		self.value = amount.toString();
 		return this.setProductAmountInCart(product,amount);
 	}
