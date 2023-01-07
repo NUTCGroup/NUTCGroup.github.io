@@ -72,6 +72,10 @@ class shoppingCartOnNavBar{
 			if (Number.isInteger(value) && value <= 1000 && value > 0){
 				this.#Cart[i] = value;
 			}
+			else{
+				this.#Cart[i] = 0;
+			}
+
 		};
 		return;
 	}
