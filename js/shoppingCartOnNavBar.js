@@ -110,5 +110,8 @@ class shoppingCartOnNavBar{
 	//	var box = (new URL(location.href)).searchParams;
 	//	for (var i=0;i<3;i++);
 	//}
+	static readCart(){
+		return this.#Cart;
+	}
 }
 shoppingCartOnNavBar.loadFromCookie();
