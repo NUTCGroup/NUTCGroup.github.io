@@ -86,15 +86,20 @@ class shoppingCartOnNavBar{
 		//</tr>
 		var total = 60; //運費
 		Object.keys(this.#Cart).forEach(e=>{
-			console.error(this.#Cart[e]);
-			console.log(products[e].price)
 			total += products[e].price * this.#Cart[e];
 		});
 		this.#footerholder.innerHTML = `<tr><td colspan="4">運費</td><td class="text-right"><strong>$60</strong></td></tr><tr><td colspan="4">合計</td><td class="text-right"><strong>$${total}</strong></td></tr>`;
 		this.#updateCookie();
 	}
 	static #updateCookie(){
-		for (var i=0; i<2; i++) cookie.setCookie(i,(this.#Cart[i] ? this.#Cart[i] : ""),1);
+		for (var i=0; i<2; i++){ 
+			if (i in Object.keys(this.#Cart)){
+				cookie.setCookie(i,this.#Cart[i],1);
+			}else{
+				cookie.setCookie(i,"",0);
+			};
+		
+		};
 		return;
 	}
 	static loadFromCookie(){
@@ -104,7 +109,7 @@ class shoppingCartOnNavBar{
 				this.#Cart[i] = value;
 			}
 		};
-		for (e in this.#Cart) console.log(e);
+		Object.keys(this.#Cart).forEach((e)=>{this.#displayToCart(e)})
 		return;
 	}
 }
