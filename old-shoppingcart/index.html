@@ -20,8 +20,9 @@
 		}
 	</style>
 </head>
+
 <body>
-    <header class="fixed-top">
+    <header >
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Third navbar example">
 			<div class="container">
 				<a class="navbar-brand" href="../"><img src="../icon.ico" class="img-fluid" alt="" style="height:30px;width:30px"><b>ミルクチーズ</b></a>
@@ -46,40 +47,57 @@
 			</div>
 		</nav>
 	</header>
-    <main>
-        <div class="row container-fluid d-flex justify-content-center">
-            <div class="col-4 ">
-                <div class="d-flex align-items-center justify-content-end" style="height:100vh;">
-                    <img src="https://fakeimg.pl/400x400/?retina=1&text=EXEMPLEIMG&font=noto" id="item">
-                </div>
-            </div>
-            <div class="col-6 ">
-                <div class="d-flex align-items-center align-content-center flex-wrap" style="height:100vh;">
-                    <h1 class="description" id="title"></h1>
-                    <div class="description" id="content"></div>
-					<div class="description" id="onpay">
-						<div class="" id="payCount">
+    <main >
+		<div class="">
+			<div class="row">
+				<div class="col-7 p-2 d-flex justify-content-end" >
+					<div class="container mx-2"  id="shoppingcart">
+						<div class="shoppingcart-value ">
+							<span>原味鮮奶酪</span>
+							<div class="d-flex justify-content-end">
 
-								<div id="contain">立即加入購物車：</div>
-								<div id="input"> 
-									<input type="number" max="1000" min="0" value="0">
-								</div>
-								<a name="sender" id="sender" class="btn" href="" role="button">添加到購物車</a>
-							
+								
+								<input type="number" name="原味鮮奶酪"  class="countinput">
+								
+							</div>
+						</div>
+						<div class="shoppingcart-value ">
+							<span>杏仁鮮奶酪</span>
+							<div class="d-flex justify-content-end">
+								
+								<input type="number" name="杏仁鮮奶酪"  class="countinput">
+								
+							</div>
+						</div>
+						<div class="shoppingcart-value ">
+							<span>芋頭鮮奶酪</span>
+							<div class="d-flex justify-content-end">
+								
+								<input type="number" name="芋頭鮮奶酪"  class="countinput">
+								
+							</div>
 						</div>
 					</div>
-                    <div class="description d-flex align-items-start justify-content-between" id="price">
-                        <h1>單價：<span id="price_"> </span>/個</h1>
-                        <input name="" id="" type="button" onclick="window.open('../shoppingcart','_self')" value="前往購選頁面">
-                    </div>
-                    <div class="description d-flex align-items-end justify-content-end" id="sender" onloadbegin="console.log(123)">
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
+				</div>
+				<div class="col-5 p-2 " id="value">
+					<div class="container mx-2" id="value-first">
+						<span id="value-title">
+							<h1>右上角資訊</h1>
+						</span>
+						<span id="value-contains">
+
+						</span>
+					</div>
+					<div class="container mx-2" id="value-end">
+						<span id="value-title">
+							<h1>結算</h1>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
     </main>
 	<footer class="text-center text-bg-dark py-2 fixed-bottom">© 2022 All Rights Reserved</footer>
-	<script src="script.js"></script>
+	<script src="./button.js"></script>
 </body>
 </html>

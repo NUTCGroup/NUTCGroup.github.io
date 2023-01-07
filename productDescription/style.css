@@ -26,13 +26,91 @@ img#item{
 }
 .description#title{
     border-bottom:gray 2px solid;
+    font-size: 50px;
+    font-weight: bolder;
 }
 .description#content{
-    height: 35vh;
-    max-height: 35vh;
-    border-bottom:gray 2px solid;
-    font-size: larger;
+    height: 25vh;
+    max-height: 25vh;
+    font-size: 30px;
 }
+.description#onpay{
+    border-bottom:gray 4px solid;
+    height: 10vh;
+    display: flex;
+    justify-self: end;
+    justify-content: end;
+}
+.description#onpay div#payCount{
+    
+    display: flex;
+    justify-self: end;
+    justify-content: end;
+}
+
+.description#onpay div#payCount *{
+    display: flex;
+    align-self: flex-end;
+}
+
+
+
+.description#onpay div#payCount div{
+    margin: 10px; 
+    text-align: center;
+}
+.description#onpay div#payCount div#contain{
+font-size: 20px;
+font-weight: bolder;
+}
+
+.description#onpay div#payCount div#input{
+
+    border-width:0px;
+	border-bottom: gray 2px solid;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+.description#onpay div#payCount div#input input{
+	text-align: end;
+	background: none;
+	padding: 10px 0px;
+    height: 30px;
+	width: 100px;
+    max-width: 100px;
+	border:none;
+	font-weight: bold;
+	font-size: larger;
+	outline:none;
+    
+}
+
+/* Chrome, Safari, Edge, Opera */ 
+.description#onpay div#payCount div#input input::-webkit-outer-spin-button, .description#onpay div#payCount div#input input::-webkit-inner-spin-button {
+    webkit-appearance: none;  
+    appearance: none;  
+    margin: 0px 5px; 
+}  
+/* Firefox */ 
+.description#onpay div#payCount div#input input[type=number] {
+    -moz-appearance: textfield; 
+}
+
+.description#onpay div#payCount div#input::after{
+    content: "x";
+    display: flex;
+    align-self: end;
+}
+.description#onpay div#payCount a#sender{
+
+    border-bottom: gray solid 2px;
+    border-radius: 0px;
+    height: 40px;
+    margin: 10px;
+    font-size: 20px;
+}
+
 .description#price{
     height: 15vh;
     max-height: 15vh;
