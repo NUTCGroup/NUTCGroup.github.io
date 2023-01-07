@@ -26,17 +26,6 @@ class shoppingCartOnNavBar{
 	static #footerholder = document.getElementById("shoppingCartOnNavBarFooter"); 
 	static #Cart = {};
 	static displayToCart(product){
-		//	<tr>
-		//	<td class="text-center">
-		//		<i class="fa-solid fa-trash"></i>
-		//	</td>
-		//	<td class="align-middle">
-		//		<img src="image/originalCotta.jpeg" style="width:50px;">
-		//	</td>
-		//	<td class="align-middle">原味鮮奶酪</td>
-		//	<td class="align-middle">1杯</td>
-		//	<td class="align-middle text-right">$40</td>
-		//  </tr>
 		if (!(product in [0,1,2])) throw "invaild product id";
 		var amount = (this.#Cart[product] ? this.#Cart[product] : 0);
 		this.#holder.innerHTML += `<tr id='navbarProduct-${product}'><td class='text-center'><i class='fa-solid fa-trash' onclick="shoppingCartOnNavBar.removeFromCart(${product})"></i></td><td class='align-middle'><img src='${products[product].image}' style='width:50px;'></td><td class='align-middle'>${products[product].name}</td><td class='align-middle'><span class="navbarProduct_amount">${amount}</span>杯</td><td class='align-middle text-right'>$<span class="navbarProduct_total">${amount * products[product].price}</span></td></tr>`;
@@ -57,18 +46,7 @@ class shoppingCartOnNavBar{
 		return;
 	}
 	static updateTotal(){
-		//	<tr>
-		//	<td colspan="4">運費</td>
-		//	<td class="text-right">
-		//		<strong>$60</strong>
-		//	</td>
-		//</tr>
-		//<tr>
-		//	<td colspan="4">合計</td>
-		//	<td class="text-right">
-		//		<strong>$100</strong> 
-		//	</td>
-		//</tr>
+
 		var total = 60; //運費
 		Object.keys(this.#Cart).forEach(e=>{
 			total += products[e].price * this.#Cart[e];
@@ -85,6 +63,7 @@ class shoppingCartOnNavBar{
 			};
 		
 		};
+		console.log(document.cookie)
 		return;
 	}
 	static loadFromCookie(){
