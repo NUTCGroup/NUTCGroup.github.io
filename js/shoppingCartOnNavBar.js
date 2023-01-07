@@ -95,10 +95,10 @@ class shoppingCartOnNavBar{
 	static updateTotalAmount(){
 		var total = 0;
 		Object.keys(this.#Cart).forEach(e=>{total+=this.#Cart[e];});
-		var e = document.getElementById("shoppingCartOnNavBarTotalAmount")
+		var e = document.getElementById("shoppingCartOnNavBarTotalAmount");
 		try{
 			e.innerText = total.toString();
-			e.style.display = (total===0 ? "none" : "inline");
+			e.style.display = ((total===0) ? "none" : "inline");
 		}catch{
 			return;
 		}
