@@ -94,7 +94,7 @@ class shoppingCartOnNavBar{
 		this.updateTotal();
 	}
 	static removeFromCart(product){
-		document.getElementById(`navbarProduct-${product}`).remove();
+		if (this.minAmount > 0) document.getElementById(`navbarProduct-${product}`).remove();
 		this.#Cart[product] = 0;
 		this.updateTotal();
 		this.#updateCookie();
