@@ -24,6 +24,7 @@ class cookie{ // https://www.w3schools.com/js/js_cookies.asp
 class shoppingCartOnNavBar{
 	static #holder = document.getElementById("shoppingCartOnNavBarProducts"); 
 	static #footerholder = document.getElementById("shoppingCartOnNavBarFooter"); 
+	static #badge = document.getElementById("shoppingCartOnNavBarTotalAmount"); 
 	static #Cart = {};
 	static displayToCart(product,ex = true){
 		if (!(product in [0,1,2])) throw "invaild product id";
@@ -100,13 +101,18 @@ class shoppingCartOnNavBar{
 	static updateTotalAmount(){
 		var total = 0;
 		Object.keys(this.#Cart).forEach(e=>{total+=this.#Cart[e];});
-		var e = document.getElementById("shoppingCartOnNavBarTotalAmount");
-		try{
-			e.innerText = total.toString();
-			e.style.display = ((total===0) ? "none" : "inline");
-		}catch{
-			return;
+		if (this.#badge){
+			this.#badge.innerText = total.toString();
+			this.#badge.style.display = ((total===0) ? "none" : "inline");
 		}
+		return;
+		//var e = document.getElementById("shoppingCartOnNavBarTotalAmount");
+		//try{
+		//	e.innerText = total.toString();
+		//	e.style.display = ((total===0) ? "none" : "inline");
+		//}catch{
+		//	return;
+		//}
 	}
 	//static loadFromURL(){
 	//	var box = (new URL(location.href)).searchParams;
