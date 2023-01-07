@@ -42,7 +42,7 @@ class shoppingCartOnNavBar{
 		var p = document.getElementById(`navbarProduct-${product}`);
 		this.#Cart[product] = amount;
 		if (p){
-			p.getElementsByClassName("navbarProduct_amount")[0].innerText = amount.toString();
+			p.getElementsByClassName("navbarProduct_amount")[0].value = amount.toString();
 			p.getElementsByClassName("navbarProduct_total")[0].innerText = (amount * products[product].price).toString();
 		}else{
 			this.displayToCart(product);
@@ -121,7 +121,7 @@ class shoppingCartOnNavBar{
 		}else if(!Number.isInteger(amount)){ 
 			amount = parseInt(amount);
 		}
-		amount = Math.max(Math.min(1000,self.value),1);
+		amount = Math.max(Math.min(1000,amount),1);
 		self.value = amount.toString();
 		return this.setProductAmountInCart(product,amount);
 	}
