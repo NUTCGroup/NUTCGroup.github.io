@@ -35,13 +35,12 @@ class shoppingCartOnNavBar{
 		return;
 	}
 	static addToCart(product,amount){
-		if (this.#Cart[product] > 0){
-			this.#Cart[product] += amount;
-			var p = document.getElementById(`navbarProduct-${product}`);
+		var p = document.getElementById(`navbarProduct-${product}`);
+		if (this.#Cart[product] > 0){this.#Cart[product] += amount}else{this.#Cart[product] = amount}
+		if (p){
 			p.getElementsByClassName("navbarProduct_amount")[0].innerText = this.#Cart[product].toString();
 			p.getElementsByClassName("navbarProduct_total")[0].innerText = (this.#Cart[product] * products[product].price).toString();
 		}else{
-			this.#Cart[product] = amount;
 			this.displayToCart(product);
 		}
 		this.updateTotal();
