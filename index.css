@@ -259,9 +259,6 @@ img#eluo:hover {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-.oporu:active > div.oporu{
-    background-image: url("https://tenor.com/view/cowboy-screaming-big-enough-gif-11112189");
-}
 @keyframes betterRick{
     0%{
         background-size: 110%;
