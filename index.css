@@ -193,7 +193,7 @@ span.icon{
 }
 .name{
     height: 150px;
-    background-color: #aaaaaa;
+    background-color: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -212,3 +212,19 @@ span.icon{
     border-radius: 0px;
 }
 
+img#eluo:hover {
+    animation-name: eluo;
+    animation-duration: 2s;
+    animation-direction: reverse;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes eluo{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
