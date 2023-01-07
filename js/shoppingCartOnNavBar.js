@@ -1,4 +1,4 @@
-// load loadProducts.js before loading this
+// load loadProducts.js before loading ti<3his
 class cookie{ // https://www.w3schools.com/js/js_cookies.asp
 	static setCookie(cname, cvalue, exdays) {
 		const d = new Date();
@@ -92,7 +92,7 @@ class shoppingCartOnNavBar{
 		this.#updateCookie();
 	}
 	static #updateCookie(){
-		for (var i=0; i<2; i++){ 
+		for (var i=0; i<3; i++){ 
 			if (i in Object.keys(this.#Cart)){
 				cookie.setCookie(i,this.#Cart[i],1);
 			}else{
@@ -103,7 +103,7 @@ class shoppingCartOnNavBar{
 		return;
 	}
 	static loadFromCookie(){
-		for (var i=0; i<2; i++){
+		for (var i=0; i<3; i++){
 			var value = parseInt(cookie.getCookie(i)) 
 			if (Number.isInteger(value) && value <= 1000 && value > 0){
 				this.#Cart[i] = value;
@@ -111,6 +111,10 @@ class shoppingCartOnNavBar{
 		};
 		Object.keys(this.#Cart).forEach((e)=>{this.#displayToCart(e)})
 		return;
+	}
+	static loadFromURL(){
+		var box = (new URL(location.href)).searchParams;
+		for (var i=0;i<3;i++);
 	}
 }
 shoppingCartOnNavBar.loadFromCookie();
