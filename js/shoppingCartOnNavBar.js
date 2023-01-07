@@ -25,6 +25,7 @@ class shoppingCartOnNavBar{
 	static #holder = document.getElementById("shoppingCartOnNavBarProducts"); 
 	static #footerholder = document.getElementById("shoppingCartOnNavBarFooter"); 
 	static #badge = document.getElementById("shoppingCartOnNavBarTotalAmount"); 
+	static minAmount = 1;
 	static #Cart = {};
 	static displayToCart(product,ex = true){
 		if (!(product in [0,1,2])) throw "invaild product id";
