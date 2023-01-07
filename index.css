@@ -54,7 +54,7 @@ button{
     transition-duration: 250ms;
     min-width: 350px;
     max-width: 450px;
-    margin: 20px auto;
+    margin: 10px auto;
     position: relative;
     bottom: 0px;
     left: 0;
@@ -109,7 +109,7 @@ button.buy:active{
 	background-color: #777777;
 }
 .trapCard{
-    background-color:rgba(51, 51, 51, 0.62);
+    background-color:rgb(194, 146, 92, .7);
     
     border-radius: 10px;
     color:white;
@@ -133,7 +133,7 @@ span.icon{
 
 /* ani */
 #product{
-    background-color:rgba(51, 51, 51, 0.62);
+    background-color:rgb(212, 178, 140, .7);
     
 }
 
@@ -199,13 +199,17 @@ span.icon{
     justify-content: center;
     align-items: center;
 }
+
 .nameButton{
     transition-duration: 1s;
-    background-color: #aaaaaa;
+    background-color: #ceaf8c;
     border-radius: 10px;
+    padding: 5px;
+    border: none;
 }
 .nameButton:hover{
     transition-duration: 0.5s;
     background-color: #999999;
     border-radius: 0px;
 }
+
