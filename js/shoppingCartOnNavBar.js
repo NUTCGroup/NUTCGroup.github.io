@@ -52,7 +52,7 @@ class shoppingCartOnNavBar{
 		//  </tr>
 		if (!(product in [0,1,2])) return console.error("invaild product id");
 
-		this.#holder.innerHTML += `<tr id='navbarProduct-${product}'><td class='text-center'><i class='fa-solid fa-trash'></i></td><td class='align-middle'><img src='${products[product].image}' style='width:50px;'></td><td class='align-middle'>${products[product].name}</td><td class='align-middle'><span class="navbarProduct_amount">${this.#Cart[product]}</span>杯</td><td class='align-middle text-right'>$<span class="navbarProduct_total">${this.#Cart[product] * products[product].price}</span></td></tr>`;
+		this.#holder.innerHTML += `<tr id='navbarProduct-${product}'><td class='text-center'><i class='fa-solid fa-trash' onclick="shoppingCartOnNavBar.removeFromCart(${product})"></i></td><td class='align-middle'><img src='${products[product].image}' style='width:50px;'></td><td class='align-middle'>${products[product].name}</td><td class='align-middle'><span class="navbarProduct_amount">${this.#Cart[product]}</span>杯</td><td class='align-middle text-right'>$<span class="navbarProduct_total">${this.#Cart[product] * products[product].price}</span></td></tr>`;
 		return;
 	}
 	static addToCart(product,amount){
@@ -115,6 +115,12 @@ class shoppingCartOnNavBar{
 	static displayAll(){
 		Object.keys(this.#Cart).forEach((e)=>{this.#displayToCart(e)})
 		this.#updateTotal();
+	}
+	static removeFromCart(product){
+		document.getElementById(`navbarProduct-${product}`).remove();
+		delete this.#Cart[product];
+		this.#updateTotal();
+		this.#updateCookie();
 	}
 	//static loadFromURL(){
 	//	var box = (new URL(location.href)).searchParams;
