@@ -40,6 +40,7 @@ class shoppingCartOnNavBar{
 	}
 	static setProductAmountInCart(product,amount){
 		var p = document.getElementById(`navbarProduct-${product}`);
+		amount = Math.max(Math.min(1000,amount),1);
 		this.#Cart[product] = amount;
 		if (p){
 			p.getElementsByClassName("navbarProduct_amount")[0].value = amount.toString();
