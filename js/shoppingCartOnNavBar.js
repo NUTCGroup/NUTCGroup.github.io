@@ -92,7 +92,17 @@ class shoppingCartOnNavBar{
 		document.getElementById(`navbarProduct-${product}`).remove();
 		this.#Cart[product] = 0;
 		this.updateTotal();
+		this.updateTotalAmount();
 		this.#updateCookie();
+	}
+	static updateTotalAmount(){
+		var total = 0;
+		Object.keys(this.#Cart).forEach(e=>{total+=this.#Cart[e];});
+		try{
+			document.getElementById("shoppingCartOnNavBarTotalAmount").innerText = total.toString();
+		}catch{
+			return;
+		}
 	}
 	//static loadFromURL(){
 	//	var box = (new URL(location.href)).searchParams;
