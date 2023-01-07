@@ -1,1 +1,2 @@
-// need products loaded
+// load loadProducts.js before loading this
+
