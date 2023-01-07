@@ -81,7 +81,7 @@ class shoppingCartOnNavBar{
 			if (i in Object.keys(this.#Cart)){
 				cookie.setCookie(`p${i}`,this.#Cart[i],1);
 			}else{
-				cookie.setCookie(`p${i}`,0,0);
+				cookie.setCookie(`p${i}`,0,1);
 			};
 		
 		};
@@ -110,8 +110,8 @@ class shoppingCartOnNavBar{
 	//	var box = (new URL(location.href)).searchParams;
 	//	for (var i=0;i<3;i++);
 	//}
-	static readCart(){
-		return this.#Cart;
-	}
+	//static readCart(){
+	//	return this.#Cart;
+	//
 }
 shoppingCartOnNavBar.loadFromCookie();
