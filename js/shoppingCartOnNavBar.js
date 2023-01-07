@@ -35,8 +35,10 @@ class shoppingCartOnNavBar{
 		if (product in this.#Cart){
 			this.#Cart[product] += amount;
 			var p = document.getElementById(`navbarProduct-${product}`);
-			p.getElementsByClassName("navbarProduct_amount")[0].innerText = this.#Cart[product].toString();
-			p.getElementsByClassName("navbarProduct_total")[0].innerText = (this.#Cart[product] * products[product].price).toString();
+			if (this.#Cart[product] > 0){
+				p.getElementsByClassName("navbarProduct_amount")[0].innerText = this.#Cart[product].toString();
+				p.getElementsByClassName("navbarProduct_total")[0].innerText = (this.#Cart[product] * products[product].price).toString();
+			}
 		}else{
 			this.#Cart[product] = amount;
 			this.displayToCart(product);
