@@ -1,5 +1,26 @@
 // load loadProducts.js before loading this
-
+class cookie{ // https://www.w3schools.com/js/js_cookies.asp
+	static setCookie(cname, cvalue, exdays) {
+		const d = new Date();
+		d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+		let expires = "expires="+d.toUTCString();
+		document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	}
+	static getCookie(cname) {
+		let name = cname + "=";
+		let ca = document.cookie.split(';');
+		for(let i = 0; i < ca.length; i++) {
+			let c = ca[i];
+			while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+}
 class shoppingCartOnNavBar{
 	static #holder = document.getElementById("shoppingCartOnNavBarProducts"); 
 	static #footerholder = document.getElementById("shoppingCartOnNavBarFooter"); 
@@ -70,5 +91,21 @@ class shoppingCartOnNavBar{
 			total += products[e].price * this.#Cart[e];
 		});
 		this.#footerholder.innerHTML = `<tr><td colspan="4">運費</td><td class="text-right"><strong>$60</strong></td></tr><tr><td colspan="4">合計</td><td class="text-right"><strong>$${total}</strong></td></tr>`;
+		this.#updateCookie();
+	}
+	static #updateCookie(){
+		for (var i=0; i<2; i++) cookie.setCookie(i,(this.#Cart[i] ? this.#Cart[i] : ""),1);
+		return;
+	}
+	static loadFromCookie(){
+		for (var i=0; i<2; i++){
+			var value = parseInt(cookie.getCookie(i)) 
+			if (Number.isInteger(value) && value <= 1000 && value > 0){
+				this.#Cart[i] = value;
+			}
+		};
+		for (e in this.#Cart) this.#displayToCart(e);
+		return;
 	}
 }
+shoppingCartOnNavBar.loadFromCookie();
