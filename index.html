@@ -49,18 +49,9 @@
 												<th width="30">小計</th>
 											</tr>
 										</thead>
-										<tbody>
-											<tr>
-												<td class="text-center">
-													<i class="fa-solid fa-trash"></i>
-												</td>
-												<td class="align-middle">
-													<img src="image/originalCotta.jpeg" style="width:50px;">
-												</td>
-												<td class="align-middle">原味鮮奶酪</td>
-												<td class="align-middle">1杯</td>
-												<td class="align-middle text-right">$40</td>
-											</tr>
+										<tbody id="shoppingCartOnNavBarProducts">
+										</tbody>
+										<tbody id="shoppingCartOnNavBarFooter">
 											<tr>
 												<td colspan="4">運費</td>
 												<td class="text-right">
@@ -70,7 +61,7 @@
 											<tr>
 												<td colspan="4">合計</td>
 												<td class="text-right">
-													<strong>$100</strong> 
+													<strong>$60</strong> 
 												</td>
 											</tr>
 										</tbody>
@@ -294,6 +285,8 @@
 	<p style="padding-top: 15px;">&copy;僅做練習使用,不提供商業用途</p>
 </footer>
 <script src="index.js"></script>
+<script src="js/loadProducts.js"></script>
+<script src="js/shoppingCartOnNavBar.js">shoppingCartOnNavBar.displayAll();</script>
 
 </html>
 

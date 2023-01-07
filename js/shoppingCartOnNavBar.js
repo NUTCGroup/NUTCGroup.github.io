@@ -109,12 +109,14 @@ class shoppingCartOnNavBar{
 				this.#Cart[i] = value;
 			}
 		};
-		Object.keys(this.#Cart).forEach((e)=>{this.#displayToCart(e)})
 		return;
 	}
-	static loadFromURL(){
-		var box = (new URL(location.href)).searchParams;
-		for (var i=0;i<3;i++);
+	static displayAll(){
+		Object.keys(this.#Cart).forEach((e)=>{this.#displayToCart(e)})
 	}
+	//static loadFromURL(){
+	//	var box = (new URL(location.href)).searchParams;
+	//	for (var i=0;i<3;i++);
+	//}
 }
 shoppingCartOnNavBar.loadFromCookie();
