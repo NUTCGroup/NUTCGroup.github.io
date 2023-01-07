@@ -252,7 +252,7 @@ img#eluo:hover {
     transition-delay: 1s;
     z-index: 1000;
     animation-name: betterRick;
-    animation-delay: 5s;
+    animation-delay: 6s;
     animation-direction: normal;
     animation-timing-function: linear;
     animation-duration: 5s;
