@@ -172,6 +172,14 @@ input[type="button"]:hover{
     animation-fill-mode: forwards;
     animation-duration: 100ms;
 }
+div.pagechanger{
+    transition-duration: 500ms;
+}
+div.pagechanger:hover{
+    transition-duration: 500ms;
+    background-color: rgba(128, 128, 128, 0.15);
+}
+
 @keyframes main {
     0%{
         opacity: 0;
