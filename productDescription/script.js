@@ -2,21 +2,24 @@ id = Number(new URL(window.location.href).searchParams.get("product"));
 snd = document.getElementById("sender");
 if (Number.isInteger(id)){
 	id = id%products.length;
-	snd.value = id
-	product = products[id];
+	//snd.value = id;
+	//product = products[id];
 }else {
-	product = products[0];
+	//product = products[0];
 	id = 0;
 };
-[
-	["title", "innerHTML", "name"],
-	["content", "innerHTML", "description"],
-	["price_", "innerHTML", "price"], 
-	["item", "src", "image"]
-].forEach((e)=>{
-	document.getElementById(e[0])[e[1]] = product[e[2]].toString();
-})
-
+function loadProduct(){
+	snd.value = id;
+	product=products[id];
+	[
+		["title", "innerHTML", "name"],
+		["content", "innerHTML", "description"],
+		["price_", "innerHTML", "price"], 
+		["item", "src", "image"]
+	].forEach((e)=>{
+		document.getElementById(e[0])[e[1]] = product[e[2]].toString();
+	})
+}
 inp = document.querySelector("div#input input")
 inp.oninput = function(){
     value = parseInt(this.value)
@@ -48,6 +51,10 @@ snd.onclick = function(){
 	}
 }
 function changePage(e){
-	window.open((location.origin+location.pathname+"?product="+((id+e)%3).toString()),"_self");
+	//window.open((location.origin+location.pathname+"?product="+((id+e)%3).toString()),"_self");
+	id = (id+e)%3;
+	window.history.pushState(location.pathname.substring(1), 'Title', (location.pathname+'?product=' + id.toString()));
+	loadProduct();
 }
+loadProduct();
 shoppingCartOnNavBar.displayAll();
