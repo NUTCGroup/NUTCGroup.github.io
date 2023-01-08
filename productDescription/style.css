@@ -24,10 +24,10 @@ img#item{
 #ondescription{
     display: flex;
     flex-flow: column;
-}
+} 
 
 .description{
-    width:100vw;
+    width:100%;
 }
 .description#title{
     border-bottom:gray 2px solid;
