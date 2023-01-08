@@ -179,6 +179,10 @@ div.pagechanger:hover{
     transition-duration: 500ms;
     background-color: rgba(128, 128, 128, 0.15);
 }
+div.pagechanger:active{
+    transition-duration: 100ms;
+    background-color: rgba(128, 128, 128, 0.30);
+}
 
 @keyframes main {
     0%{
