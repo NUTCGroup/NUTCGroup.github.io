@@ -39,10 +39,10 @@ snd.onclick = function(){
 		return
 	}
 	else if(inp.value == 0){
-		snd.innerText = "nop"
-		console.log(snd.innerText)	
+		snd.innerText = "nop";
+		//console.log(snd.innerText)	
 		setTimeout(function(){
-			snd.innerText = "添加到購物車"
+			snd.innerText = "添加到購物車";
 		},1000)
 	}
 	else{
