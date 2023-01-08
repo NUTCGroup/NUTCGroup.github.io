@@ -21,6 +21,11 @@ img#item{
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
 }
+#ondescription{
+    display: flex;
+    flex-flow: column;
+}
+
 .description{
     width:100vw;
 }
@@ -32,6 +37,8 @@ img#item{
 .description#content{
     height: 25vh;
     max-height: 25vh;
+    overflow: hidden;
+    overflow-x: scroll;
     font-size: 30px;
 }
 .description#onpay{
