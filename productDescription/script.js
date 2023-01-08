@@ -1,10 +1,13 @@
 id = Number(new URL(window.location.href).searchParams.get("product"));
-snd = document.getElementById("sender")
+snd = document.getElementById("sender");
 if (Number.isInteger(id)){
 	id = id%products.length;
 	snd.value = id
 	product = products[id];
-}else product = products[0];
+}else {
+	product = products[0];
+	id = 0;
+};
 [
 	["title", "innerHTML", "name"],
 	["content", "innerHTML", "description"],
@@ -43,5 +46,8 @@ snd.onclick = function(){
 		shoppingCartOnNavBar.addToCart(snd.value,parseInt(inp.value));
 		inp.value = 0;
 	}
+}
+function changePage(e){
+	window.open((location.origin+location.pathname+"?product="+((id+e)%3).toString()),"_self");
 }
 shoppingCartOnNavBar.displayAll();
