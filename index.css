@@ -214,7 +214,22 @@ img#xyz:hover{
     content: url(./image/XYZicon2.gif);
 }
 
-img#eluo:hover {
+img#eluo{
+    height: 160px;
+    width: 200px;
+}
+
+div#eason:hover > img#eluo {
+    transition-duration: 4s;
+    position:relative;
+    animation-name: eason;
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-direction: normal;
+    animation-timing-function: ease-in-out ;
+    animation-fill-mode: forwards;
+}
+div#eason:active > img#eluo {
     animation-name: eluo;
     animation-duration: 2s;
     animation-direction: reverse;
@@ -228,6 +243,26 @@ img#eluo:hover {
     }
     100%{
         transform: rotate(360deg);
+    }
+}
+@keyframes eason{
+    0%{
+        left: 0px;
+    }
+    25%{
+        left: -250px;
+    }
+    60%{
+        left: 2500px;
+        display: block;
+    }
+    75%{
+        display: none;
+    }
+    100%{
+        height: 0px;
+        width: 0px;
+        
     }
 }
 /* .oporu{
