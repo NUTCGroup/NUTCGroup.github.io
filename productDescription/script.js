@@ -53,6 +53,9 @@ snd.onclick = function(){
 function changePage(e){
 	//window.open((location.origin+location.pathname+"?product="+((id+e)%3).toString()),"_self");
 	id = (id+e)%3;
+	if ("undefined" === typeof history.pushState){
+		return location.assign('?product=' + id.toString());
+	}
 	window.history.pushState(location.pathname.substring(1), 'Title', (location.pathname+'?product=' + id.toString()));
 	loadProduct();
 }
