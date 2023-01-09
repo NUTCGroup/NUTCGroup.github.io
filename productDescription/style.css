@@ -104,7 +104,7 @@ font-weight: bolder;
 }
 
 .description#onpay div#payCount div#input::after{
-    content: "x";
+    content: "個";
     display: flex;
     align-self: end;
 }
