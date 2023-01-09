@@ -37,9 +37,9 @@ img#item{
 .description#content{
     height: 25vh;
     max-height: 25vh;
-    overflow: hidden;
-    overflow-x: scroll;
-    font-size: 30px;
+    /* overflow: hidden;
+    overflow-x: scroll; */
+    font-size: 20px;
 }
 .description#onpay{
     height: 10vh;
